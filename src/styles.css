@@ -62,26 +62,26 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  --radius: 0.25rem;
+  --background: oklch(0.14 0.004 60);
+  --foreground: oklch(0.96 0.005 90);
+  --card: oklch(0.18 0.005 70);
+  --card-foreground: oklch(0.96 0.005 90);
+  --popover: oklch(0.17 0.005 70);
+  --popover-foreground: oklch(0.96 0.005 90);
+  --primary: oklch(0.83 0.16 88);
+  --primary-foreground: oklch(0.16 0.01 80);
+  --secondary: oklch(0.24 0.006 70);
+  --secondary-foreground: oklch(0.96 0.005 90);
+  --muted: oklch(0.22 0.005 70);
+  --muted-foreground: oklch(0.72 0.012 85);
+  --accent: oklch(0.83 0.16 88);
+  --accent-foreground: oklch(0.16 0.01 80);
+  --destructive: oklch(0.6 0.2 25);
+  --destructive-foreground: oklch(0.98 0.003 90);
+  --border: oklch(0.28 0.006 70);
+  --input: oklch(0.28 0.006 70);
+  --ring: oklch(0.83 0.16 88);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -132,6 +132,11 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
+@theme {
+  --font-display: "Archivo", system-ui, sans-serif;
+  --font-sans: "Inter Tight", system-ui, sans-serif;
+}
+
 @layer base {
   * {
     border-color: var(--color-border);
@@ -140,5 +145,35 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
   }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@utility choice-card {
+  width: 100%;
+  text-align: left;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-card);
+  padding: 1.25rem;
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease;
+
+  &:hover {
+    border-color: var(--color-primary);
+  }
+}
+
+@utility choice-card-selected {
+  border-color: var(--color-primary);
+  background: color-mix(in oklch, var(--color-primary) 12%, var(--color-card));
 }
