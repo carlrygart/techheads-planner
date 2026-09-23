@@ -4,6 +4,7 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  useNavigate,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
@@ -11,6 +12,9 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { supabase } from "@/integrations/supabase/client";
+import { useSession } from "@/hooks/useSession";
+import { Toaster } from "@/components/ui/sonner";
 
 function NotFoundComponent() {
   return (
@@ -77,11 +81,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "TechHeadsMatcher" },
+      { name: "description", content: "Personal schedules for TechHeads 2026" },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "TechHeadsMatcher" },
+      { property: "og:description", content: "Personal schedules for TechHeads 2026" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
@@ -122,11 +126,62 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const router = useRouter();
+
+  useEffect(() => {
+    const { data } = supabase.auth.onAuthStateChange((event) => {
+      if (event !== "SIGNED_IN" && event !== "SIGNED_OUT" && event !== "USER_UPDATED") return;
+      router.invalidate();
+      if (event !== "SIGNED_OUT") queryClient.invalidateQueries();
+    });
+    return () => data.subscription.unsubscribe();
+  }, [router, queryClient]);
 
   return (
     <QueryClientProvider client={queryClient}>
+      <TopBar />
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
+      <Toaster />
     </QueryClientProvider>
+  );
+}
+
+function TopBar() {
+  const { user, ready } = useSession();
+  const navigate = useNavigate();
+  const { queryClient } = Route.useRouteContext();
+
+  const signOut = async () => {
+    await queryClient.cancelQueries();
+    queryClient.clear();
+    await supabase.auth.signOut();
+    navigate({ to: "/auth", replace: true });
+  };
+
+  return (
+    <header className="mx-auto flex w-full max-w-2xl items-center justify-between px-5 pt-5 text-sm sm:px-8">
+      <Link to="/" className="font-mono uppercase tracking-[0.2em] text-primary">
+        TechHeadsMatcher
+      </Link>
+      {ready && (
+        <nav className="flex items-center gap-5">
+          {user ? (
+            <>
+              <Link to="/schedules" className="text-muted-foreground hover:text-foreground">
+                My schedules
+              </Link>
+              <button onClick={signOut} className="text-muted-foreground hover:text-foreground">
+                Sign out
+              </button>
+            </>
+          ) : (
+            <Link to="/auth" className="text-muted-foreground hover:text-foreground">
+              Sign in
+            </Link>
+          )}
+        </nav>
+      )}
+    </header>
   );
 }

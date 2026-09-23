@@ -5,6 +5,7 @@ import { ArrowLeft, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SessionDialog } from "@/components/SessionDialog";
 import { SwapSheet } from "@/components/SwapSheet";
+import { SaveBar } from "@/components/SaveBar";
 import {
   allCategories,
   alternativesFor,
@@ -57,6 +58,8 @@ function Index() {
   const [keywords, setKeywords] = useState<string[]>([]);
   const [density, setDensity] = useState<Density>("balanced");
   const [scheduleIds, setScheduleIds] = useState<string[]>([]);
+  const [savedId, setSavedId] = useState<string | null>(null);
+  const [savedName, setSavedName] = useState<string | null>(null);
   const [open, setOpen] = useState<ScoredSession | null>(null);
   const [swapTarget, setSwapTarget] = useState<ScoredSession | null>(null);
 
@@ -72,6 +75,8 @@ function Index() {
       setKeywords(saved.answers.keywords ?? []);
       setDensity(saved.answers.density);
       setScheduleIds(saved.scheduleIds);
+      setSavedId(saved.savedId ?? null);
+      setSavedName(saved.savedName ?? null);
       setStep("result");
     }
   }, []);
@@ -90,7 +95,7 @@ function Index() {
     const built = buildSchedule(answers);
     setScheduleIds(built.map((s) => s.id));
     setStep("result");
-    saveState({ answers, scheduleIds: built.map((s) => s.id) });
+    saveState({ answers, scheduleIds: built.map((s) => s.id), savedId, savedName });
   };
 
   const restart = () => {
@@ -99,6 +104,8 @@ function Index() {
     setKeywords([]);
     setDensity("balanced");
     setScheduleIds([]);
+    setSavedId(null);
+    setSavedName(null);
     setStep("landing");
   };
 
@@ -106,8 +113,14 @@ function Index() {
     if (!swapTarget) return;
     const next = scheduleIds.map((id) => (id === swapTarget.id ? alt.id : id));
     setScheduleIds(next);
-    saveState({ answers, scheduleIds: next });
+    saveState({ answers, scheduleIds: next, savedId, savedName });
     setSwapTarget(null);
+  };
+
+  const onSaved = (id: string, name: string) => {
+    setSavedId(id);
+    setSavedName(name);
+    saveState({ answers, scheduleIds, savedId: id, savedName: name });
   };
 
   const toggle = (list: string[], value: string, set: (v: string[]) => void) =>
@@ -207,6 +220,15 @@ function Index() {
           onSwap={setSwapTarget}
           onRestart={restart}
           onEdit={() => setStep("categories")}
+        />
+      )}
+      {step === "result" && schedule.length > 0 && (
+        <SaveBar
+          answers={answers}
+          scheduleIds={scheduleIds}
+          savedId={savedId}
+          savedName={savedName}
+          onSaved={onSaved}
         />
       )}
 

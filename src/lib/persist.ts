@@ -2,7 +2,13 @@ import type { Answers } from "./matcher";
 
 const KEY = "techheads-matcher-v1";
 
-export type Saved = { answers: Answers; scheduleIds: string[] };
+export type Saved = {
+  answers: Answers;
+  scheduleIds: string[];
+  /** id of the cloud-saved schedule this local state belongs to, if any */
+  savedId?: string | null;
+  savedName?: string | null;
+};
 
 export function loadSaved(): Saved | null {
   try {
