@@ -81,10 +81,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "TechHeadsMatcher" },
+      { title: "TechHeadsPlanner" },
       { name: "description", content: "Personal schedules for TechHeads 2026" },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "TechHeadsMatcher" },
+      { property: "og:title", content: "TechHeadsPlanner" },
       { property: "og:description", content: "Personal schedules for TechHeads 2026" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -162,7 +162,7 @@ function TopBar() {
   return (
     <header className="mx-auto flex w-full max-w-2xl items-center justify-between px-5 pt-5 text-sm sm:px-8">
       <Link to="/" className="font-mono uppercase tracking-[0.2em] text-primary">
-        TechHeadsMatcher
+        TechHeadsPlanner
       </Link>
       {ready && (
         <nav className="flex items-center gap-5">

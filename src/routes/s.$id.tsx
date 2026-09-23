@@ -10,7 +10,7 @@ import { matchPercent, scoreSessions, totalSessions, whyLine, type Answers, type
 export const Route = createFileRoute("/s/$id")({
   head: () => ({
     meta: [
-      { title: "A shared TechHeads schedule — TechHeadsMatcher" },
+      { title: "A shared TechHeads schedule — TechHeadsPlanner" },
       { name: "description", content: "See this personal TechHeads 2026 schedule, then build your own in three questions." },
       { property: "og:title", content: "A shared TechHeads schedule" },
       { property: "og:description", content: "See this personal TechHeads 2026 schedule, then build your own in three questions." },

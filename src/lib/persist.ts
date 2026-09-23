@@ -1,6 +1,6 @@
 import type { Answers } from "./matcher";
 
-const KEY = "techheads-matcher-v1";
+const KEY = "techheads-planner-v1";
 
 export type Saved = {
   answers: Answers;

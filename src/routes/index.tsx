@@ -24,13 +24,13 @@ import { clearSaved, loadSaved, saveState } from "@/lib/persist";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "TechHeadsMatcher — Your personal TechHeads 2026 schedule" },
+      { title: "TechHeadsPlanner — Your personal TechHeads 2026 schedule" },
       {
         name: "description",
         content:
           "Answer three quick questions and get a personal timeline for TechHeads 2026, built from the full conference programme.",
       },
-      { property: "og:title", content: "TechHeadsMatcher — Your personal TechHeads 2026 schedule" },
+      { property: "og:title", content: "TechHeadsPlanner — Your personal TechHeads 2026 schedule" },
       {
         property: "og:description",
         content:

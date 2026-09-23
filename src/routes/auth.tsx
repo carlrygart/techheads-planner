@@ -14,9 +14,9 @@ export const Route = createFileRoute("/auth")({
   validateSearch: z.object({ redirect: z.string().optional() }),
   head: () => ({
     meta: [
-      { title: "Sign in — TechHeadsMatcher" },
+      { title: "Sign in — TechHeadsPlanner" },
       { name: "description", content: "Sign in to save your TechHeads schedules and share them with a link." },
-      { property: "og:title", content: "Sign in — TechHeadsMatcher" },
+      { property: "og:title", content: "Sign in — TechHeadsPlanner" },
       { property: "og:description", content: "Save your TechHeads schedules and share them with a link." },
     ],
   }),
@@ -63,7 +63,7 @@ function AuthPage() {
 
   return (
     <main className="mx-auto flex min-h-[80vh] w-full max-w-md flex-col justify-center px-5 py-10">
-      <p className="font-mono text-sm uppercase tracking-[0.2em] text-primary">TechHeadsMatcher</p>
+      <p className="font-mono text-sm uppercase tracking-[0.2em] text-primary">TechHeadsPlanner</p>
       <h1 className="mt-4 text-4xl font-bold">{mode === "signin" ? "Sign in" : "Create account"}</h1>
       <p className="mt-3 text-muted-foreground">Save several schedules and share any of them with a link.</p>
 

@@ -12,9 +12,9 @@ import type { Answers } from "@/lib/matcher";
 export const Route = createFileRoute("/_authenticated/schedules")({
   head: () => ({
     meta: [
-      { title: "My schedules — TechHeadsMatcher" },
+      { title: "My schedules — TechHeadsPlanner" },
       { name: "description", content: "Your saved TechHeads schedules." },
-      { property: "og:title", content: "My schedules — TechHeadsMatcher" },
+      { property: "og:title", content: "My schedules — TechHeadsPlanner" },
       { property: "og:description", content: "Your saved TechHeads schedules." },
     ],
   }),
