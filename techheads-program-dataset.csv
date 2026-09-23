@@ -1,0 +1,179 @@
+description,title,speaker,time,location,company,category,keywords
+"Skills, hiring and upskilling in a GenAI boom
+
+We’re excited to welcome Prof. Dr. Dr. Per Almqvist as a speaker at TechHeads 2026. Per is a Professor of Software Engineering at Blekinge Institute of Technology and a senior guest researcher at Fortiss (Germany). With extensive industry experience as a CTO, consultant, engineer, chief architect, and product manager, he bridges cutting-edge research with the realities of building software-intensive products and services.
+
+In his session, Per will share his perspective on the future skills landscape for engineers. What changes when GenAI becomes part of everyday engineering? What are the biggest challenges and blind spots for companies and education, and what practical steps can we take to avoid falling behind?",The future engineer in the age of AI,Per Almqvist,09:00-10:00,Gröna salen,Polytekniska Institutet,The Big Picture,"AI, Upskilling, Leadership, Business, Why"
+"As generative AI reshapes everyday engineering, how do organizations ensure their workforce doesn't fall behind? In this panel, industry experts and talent leaders discuss the realities of the future skills landscape. What happens when AI becomes a standard workflow rather than an experiment? How do we identify the biggest blind spots in hiring and people management, and what practical steps are required to upskill teams at scale? Join Per Almqvist (Polytekniska Institutet), Håkan Bergvall (Nordcom), Ingrid Salomonsson (Snabbud), and Oskar Hedmark (Källcykeln) as they explore how to build and future-proof the next generation of tech talent.",The Skills of Tomorrow: Upskilling in a GenAI Boom,"Per Almqvist - Polytekniska Institutet, Håkan Bergvall - Nordcom, Ingrid Salomonsson - Snabbud, Oskar Hedmark, Källcykeln (kolla stavningen) Moderator: Nora Wiklund",10:00-10:30,Gröna salen,,The Big Picture,"AI, Upskilling, Leadership, Why"
+"A Live Energy Experiment from Teknikklustret
+
+Most organizations do not lack technology, they lack a way to start when complexity takes over.
+
+At Tech Heads 2026, Erik Lindahl shares a practical approach tested in real environments, from an advanced energy hub in Lilla Älghult to a live experiment at Sweden Rock Festival. Expect real data, real constraints, and step-by-step learning that turns complexity into progress.
+
+If you work with energy, infrastructure, or complex operations, this is a session you do not want to miss.",Sweden Rock as an Energy Lab,Erik Lindahl,11:00-11:15,Borgstugan,Aura Energi,Smart Cities,"Energy, IoT, Resilience, Case Study, How"
+"Connecting healthcare, academia and industry.
+
+We're excited to welcome Sara Bjelke as a speaker at Techheads 2026. Sara is an Associate Professor in Health Informatics and Managing Director of the eHealth Institute at Linnaeus University. Her research focuses on how health data, AI and digital technologies can improve healthcare, with a particular focus on medication safety.
+
+In this session, Sara will explore the opportunities of using health data and AI in healthcare, with examples from current research and an overview of the health data landscape. She'll introduce Health Data Sweden (HDS), a national ecosystem connecting leading actors across Sweden to support SMEs and the public sector in making better use of health data. A key focus will be on collaboration: how academia, healthcare and the tech sector can combine their strengths to drive innovation and address major challenges facing healthcare today.",FROM HEALTH DATA TO INNOVATION,Sara Bjelke,11:00-11:30,Sturesalen,Storviks universitet,Smart Cities,"eHealth, Public Sector, Business, Leadership"
+"What defines the organizations that succeed with AI.
+
+We're excited to welcome Rikard Grenholm as a speaker at Techheads 2026. Rikard is Concept Manager at Nordbit, one of Northern Europe's leading IT infrastructure companies, with deep expertise in AI maturity assessments and organizational AI readiness.
+
+In this session, Rikard will draw on insights from AI maturity assessments across organizations and the latest global AI reports to show what successful leadership teams do differently. He'll explain how they create direction, governance, and long-term AI capability that delivers real business value – and what truly defines the organizations that succeed with AI.",AI as a force for the future,Rikard Grenholm,11:00-11:30,Sven Månsson,Nordbit,Data & Business Strategy,"AI, Leadership, Business, Why, How"
+"Beyond automation and augmentation
+
+Viktor Sandell is a Creative Technologist in the Intelligence Age and Course Director of Speculative Design at Berghs School of communication. At Techheads, he will cover More Than Human organizations and introduce a third path for AI transformation: ensembling, where human and non-human knowledge workers co-produce outcomes without being confined to separate lanes.",A new operating system for knowledge work,Viktor Sandell,11:00-11:45,Gröna salen,,The Big Picture,"AI, Future Tech, Leadership, Why"
+"Proactive cybersecurity and hands-on hacking.
+
+We’re thrilled to welcome the experts from Utposten24 to the stage at TechHeads 2026. In an era where cyberattacks are no longer a question of ""if"" but ""when,"" Utposten24 specializes in finding your vulnerabilities before the bad guys do. They help organizations move from reactive panic to proactive control by mastering the art of Exposure Management.
+
+In this high-stakes session, you’ll witness a Live Hack in real-time. You’ll see exactly how an attacker identifies an entry point, escalates privileges, and takes control of a system. But we don’t stop at watching—after the keynote, you’re invited to the Green Room. There, you’ll get hands-on experience at our hacking station, where you can test your own skills and try to breach a controlled environment under expert guidance. Whether you're a developer, a CISO, or just curious about the dark side of the web, this session will give you the tools to understand the threat and the strategy to defend against it.",Live hack - see the world through the eyes of an attacker,Rasmus Ljunggren,11:00-12:30,Källaren,Utposten,Security & Resilience,"Cybersecurity, Resilience, Hands-on, How"
+,Modern Guru and the Path to Artificial Happiness,,11:00-11:45,,,,
+"Building a resilient, future-proof power distribution network.
+
+We're excited to welcome Elsa Norrman as a speaker at Techheads 2026. Elsa is an Technical investigation engineer at Ljusnet Energi.
+
+Electric grids are undergoing rapid transformation, with an increasing share of renewable generation, more connected devices, and higher demands for real-time information and automation. In this presentation, Elsa will explore how a Distribution Management System (DMS) can support a more efficient, resilient, and digitalized power distribution network. She'll look at concrete functionalities such as real-time situational awareness, outage management, and automated fault location, and their impact on operations, quality, and ways of working. Ultimately, this is not just about efficiency and digitalization: it is equally about how we build a secure and future-proof power grid.",Digitalizing and securing the modern power grid,Elsa Norrman,11:15-11:30,Borgstugan,Ljusnet Energi,Smart Cities,"Energy, Platforms, Resilience, Case Study, How"
+"Real-time optimisation for the infrastructure you never think about.
+
+We're excited to welcome Isak Ekholm and Filip Stenmark from Prisma as speakers at Techheads 2026. Prisma is a Malmö-based company building real-time optimisation for district heating networks, the vast thermal systems that heat much of Sweden and Denmark but are still run on static schedules and gut feeling.
+
+In this session, Isak and Filip will show what it takes to put AI in control of physical infrastructure. Combining demand forecasting, a digital twin, and real-time optimisation, they shift production in time, ride through peaks, and cut cost and emissions without compromising delivery. You'll see why physics rules out brute-force approaches, where the value actually comes from, and what it takes to move from research to the real world.",How AI can run the pipes that keep cities warm.,Isak Ekholm and Filip Stenmark,11:30-11:45,Borgstugan,Prisma,Smart Cities,"AI, Energy, IoT, Case Study, How"
+"Building lasting digital capability where it matters most.
+
+We're excited to welcome Anton Vedin as a speaker at Techheads 2026. Anton is a development lead for regional digitalisation in Jönköping County and the host of IoT-dagen 2026. He has driven innovation in Vinnova-funded IoT projects, co-created IoT-puben (a digital meeting place by municipalities, for municipalities), and helped build networks where public sector, academia, and industry come together around IoT, data, and real societal impact.
+
+In this session, Anton will share lessons from Jönköping County's collaborative IoT journey. You'll hear how IoT can be built as a long-term capability in the public sector, with real operational needs as the starting point. He'll show concrete examples of how sensor data, satellite data, and generative AI can create new insights, and explain why the campfires and the people who tend them are what make it all work.",IoT in the public sector: The bridge starts with people.,Anton Vedin,11:30-12:00,Sturesalen,IoT Forum,Smart Cities,"IoT, Public Sector, Leadership, Case Study, How"
+"AI and automation for small-scale farming.
+
+We’re excited to welcome Amalie and Jonatan Hovde from Framtidsbruket Gårdsmejeri as speakers at TechHeads 2026. Goat farmers and artisan cheese makers with a tech background, they’ve spent the last decade building a farm and a business where innovation is part of the daily workflow, from hands-on automation to projects like “Internet of Cheese” and “Getflix.”
+
+ In their session, they’ll share real-world lessons on AI and automation in small-scale agriculture, food processing, and animal husbandry, plus the pros and cons of building “homemade IT” when you just need something that works.
+
+Expect practical inspiration, a little bit of McGyver energy, and a perspective on how tech can create return not only in money, but also in cultural and social capital.",The internet of cheese,Jonatan Hovde och Amalie Hovde,11:30-12:00,Sven Månsson,Framtidsbruket,Data & Business Strategy,"AI, IoT, Business, Case Study, How"
+"What happens when traffic data becomes a tool for tourism and smarter destinations.
+
+We're excited to welcome Emil Rydberg as a speaker at Techheads 2026. Emil is CEO of Vegio AB, a Linköping-based technology company developing intelligent solutions for traffic, mobility data and smart city applications.
+
+In this session, Emil will present the real-world case of Vegio's collaboration with Öland & Co, where real-time traffic data from the Öland Bridge is being used to understand visitor flows, travel patterns and destination pressure. He'll show how technology developed for traffic analysis and mobility can create value in destination development: turning raw data into useful dashboards, identifying the needs of tourism businesses, and demonstrating how real-time insights can support better planning, marketing and visitor experiences. The core message is simple: when data is made understandable and actionable, it helps destinations move from guesswork to smarter decisions in real time.""",From traffic data to destination intelligence,Emil Rydberg,11:45-12:00,Borgstugan,Vegio,Smart Cities,"IoT, Platforms, Public Sector, Business, Case Study"
+"Kort beskrivning: Passet utgår från forskning om cognitive offloading, det vill säga när det är rationellt att låta AI ta över delar av tänkandet och när det istället urholkar den djupbearbetning som krävs för faktisk inlärning. Jag kopplar detta till konkreta iakttagelser från min tid som skolchef på Hyper Island, till aktuell forskning inom lärande och vad det betyder för mitt arbete med AI-kompetensbehov, där frågan om vad man ska lära sig själv och vad man kan delegera till AI återkommer.","AI gör dig inte dummare, om du vet var gränsen går",Lars Wennerholm,11:45-12:10,Gröna salen,Teknikklustret,The Big Picture,"AI, Upskilling, Leadership, Why"
+Discussion panel,Powering Smart Cities: The Future of Energy & IoT,"Erik Lindahl, Aura Energi Tobias Frendin, Ljusnet Energi Henning Dalgren, Isak Ekholm - Prisma Källbolaget - Kalle Sundström 30 min Moderator Tage Tornberg",12:00-12:30,Borgstugan,,Smart Cities,"Energy, IoT, Public Sector, Future Tech, Leadership"
+"AI in social services – navigating privacy, law and innovation together.
+
+We're excited to welcome Petter Åkerlund and Selma Ryding as speakers at Techheads 2026. Petter is Head of Digitalisation (CDO) at Storviks kommun, where he leads the municipality's digital transformation efforts. Selma is Innovation Leader (Innovationsledare) at Storviks kommun.
+
+In this session, Petter and Selma will share the story of how Storviks kommun explored AI-based speech-to-text in social services – and the regulatory sandbox they conducted together with the Swedish Authority for Privacy Protection (IMY). But more than a tech case, this is a talk about what happens when operational needs, law, technology and innovation collide. By bringing together lawyers, tech specialists, vendors, authorities and practitioners around the same table, they found a path forward where many only saw obstacles. A story about the courage to try something new, the power of cross-professional collaboration, and why the future of innovation is built together.",FROM LEGAL STOP TO A COMMON PATH FORWARD,Petter Åkerlund,12:00-12:30,Sturesalen,Storviks kommun,,
+"How do we bring everyone along as the world goes cashless?
+
+Meet Robin Falkenberg, Head of Technology and Evolution at Nordcom Mobile Financial Services and one of our speakers at Techheads 2026. Over 17 years, Robin has built — and now leads the technology evolution of — a platform that today gives around 130 million people across Africa and the Middle East access to basic financial services everyday, the kind of thing most of Europe takes for granted.
+
+In this session, Robin will share the story of how a team in Karlskrona set out to bank the unbanked, and how that original vision has since evolved into Buy Now Pay Later, offline payments, cross-border remittance, CBDC and stablecoins, and Digital Identity. You'll hear what it takes to make financial inclusion real, at scale, in some of the world's most challenging markets.",From Karlskrona to accra: a payments journey,Robin Falkenberg,12:00-12:30,Sven Månsson,Nordcom,Emerging Tech,"Platforms, Software, Business, Case Study, How"
+,"Navigating the AI Paradox: Leading a ""More Than Human"" Organization","Viktor Sandell, Karin Lövgren, Daniel Sjökvist, Lars Wennerholm. Moderator: Klara Mellgren",12:10-12:30,Gröna salen,,The Big Picture,"AI, Leadership, Business, Why"
+"From experiment to everyday: how one team made it real.
+
+What happens when an engineering team stops treating AI as a side project and starts building through it?
+
+Zara Milic, System Manager at Nordcom, led exactly that shift. Her team integrated AI agents, Model Context Protocols and knowledge graphs into their daily workflow, not as an experiment, but as the actual way they build and ship software products today.
+
+At Techheads 2026, she'll share what worked, what failed, and the real impact on productivity and delivery. No buzzwords, no theory. Just lessons from the messy middle between ""let's try ChatGPT"" and a fully AI-native engineering practice.
+
+Whether you're skeptical of the hype or already deep in it, you'll leave with concrete takeaways you can use tomorrow. The presentation will be delivered by two speakers: Software Architect Omar Chaudhry, present on site in Kalmar, and Zara Milic, joining remotely from another location.",AI in software development,Zara Milic and Omar Chaudhry,13:30-14:00,Gröna salen,Nordcom,Emerging Tech,"AI, Automation, Software, Case Study, How"
+"Why nature is the ultimate computer.
+
+Meet Alvar Ekström, Quantum Applications Scientist at Polaris Next Labs and one of our speakers at Techheads 2026. With a doctorate in quantum computing and over seven years in the field, Alvar works to take quantum computing from research to industry, with a focus on solving real-world problems like aircraft scheduling.
+
+In this session, Alvar will explain what quantum computing actually is, why nature itself is the ultimate computer, and what aircraft scheduling and magnets have in common. You'll also learn where the technology stands today, and how your organization can become ""quantum ready"".","What is quantum computing, really?",Alvar Ekström,13:30-14:00,Sturesalen,Polaris Next Labs,Emerging Tech,"Quantum, Future Tech, Hardware, How, Why"
+"A 3D model with real impact.
+
+We’re excited to welcome Mikkel Brandt and Greta Lundevall as speakers at Techheads 2026. Mikkel is a Digitalisation Leader at Kalmar Municipality, and Greta is the Castle Manager of Kalmar Castle, awarded the Swedish UNESCO Prize for her work with storytelling. In their joint session, they’ll share Kalmar Castle’s journey of creating a 3D model and digital twin, what they discovered along the way, how the castle benefits from it today, and what they believe is next for digital heritage and storytelling.",Digital twin,Mikkel Brandt/Greta Lundevall,13:30-14:00,Sven Månsson,Destinationsbolaget,Smart Cities,"Case Study, Public Sector, Future Tech, How"
+"You can't plan your way into AI. But you can't wing it either.
+
+Two truths are canceling each other out in organizations right now. You need to move fast with AI or get left behind. But you also need a clear strategy before investing, or you'll waste time solving the wrong problems.
+
+So which is it? Plan for months, or just run and hope for the best?
+
+Daniel Sjökvist, partner at Momentum Studio, says neither. At Techheads 2026 he'll share a third route: how to move forward while you're still figuring it out. Small bets, fast learning, and enough clarity to outweigh the anxiety of not having all the answers.
+
+ This one's for leaders who are tired of waiting for the perfect map.",The AI Paradox in organisations,Daniel Sjökvist,13:30-14:30,Borgstugan,Momentum Studio,The Big Picture,"AI, Business, Leadership, Why"
+"From zero to live IoT in one hour.
+We’re excited to welcome Arun Deshpande as a speaker at Techheads 2026. Arun spent a decade building IoT the hard way, custom hardware, bespoke firmware, wrestling with wireless connectivity, and stitching together cloud infrastructure before a single line of application logic could be written. So he built Kiselverket to collapse all of that into one system. Connect a sensor and, instead of a dashboard, just talk to it in plain English.
+In this hands-on session, you’ll build a connected IoT sensor from scratch. No prior hardware experience needed, just basic programming knowledge and a laptop. You’ll be given a Kiselverket S2 Module and a handful of sensors. By the end of the hour, your device will be live on a cellular network, collecting real data, and responding to questions in plain English, all from a web browser, no toolchains, no cloud setup, no infrastructure to wrestle with.",Build a talking sensor in 60 minutes,Arun Deshpande,13:30-15:00,Källaren,Kiselverket,Emerging Tech,"AI, IoT, Hardware, Hands-on, Workshop, How"
+"The threat you can't see yet, but need to act on now.
+
+Björn Halvarsson is both a solution architect in the Data & AI domain and a Quantum Ambassador at Cobalt Systems. In his role as Quantum Ambassador he helps organisations understand the use cases and benefits of Quantum computing and assists them in their Quantum journey.
+
+In this session Björn will explain why we need Quantum computers and what problems they can solve, and why classical computers are simply not enough. He will also give an overview of Cobalt Systems’s latest developments in Quantum computing and explain how fast this evolution is going now, and why it is important for your organization (and for our country) that we start learning this new technology now.
+
+And while Quantum computing is a great tool, it may also one day be used to crack the encryption algorithms we use to protect most of our data today, which may render extremely sensitive information visible - such as information about yourself!
+
+In this session you will get a good overview and learn how to prepare for what is around the corner!",Is your data ready for the future?,Björn Halvarsson,14:00-14:30,Sturesalen,Cobalt Systems,Data & Business Strategy,"Quantum, Resilience, Future Tech, Business, Why"
+"Meet Ulf Kanterud, Head of Development for IoT Complete at Telenord Connexion, with more than 30 years of industry experience. He was among the pioneers who brought fixed-line phone numbers to mobile devices, and he continues to drive innovation at the intersection of IoT and AI.
+
+In this session, you’ll learn how to connect your products locally and globally using the right technology. Ulf will introduce IoT Complete, a new concept designed to give you a fast, seamless path from idea to reality, including ready-to-deploy devices, rapid application setup, and a way to move from prototype to deployed product in days, with no coding required.",How do you connect products locally and globally without months of infrastructure work?,Ulf Kanterud,14:00-14:30,Sven Månsson,Telenord Connexion,Data & Business Strategy,"IoT, Platforms, Hardware, Case Study, How"
+,Modern Guru and the Path to Artificial Happiness,,14:15-15:00,,,,
+"The quantum satisfont is 2030. Act now or lose everything.
+
+What happens to your most sensitive health data when quantum computers render today's encryption obsolete? Meet Sindre Kvalheim and Teodor Wahlström from Cobalt Systems, working at the intersection of quantum computing and cybersecurity. They're part of a 40+ actor consortium racing to quantum-proof Sweden's entire health data ecosystem before the EU deadline in 2030.
+
+In this session, you'll learn why the threat isn't theoretical: adversaries are already harvesting encrypted data today, waiting for quantum to crack it open. Sindre and Teodor will break down what crypto-agility means in practice, why healthcare is the highest-priority sector, and how Sweden can turn early action into a global competitive edge.",YOUR ENCRYPTION HAS AN EXPIRY DATE,"Teodor Wahlström, Sindre Kvalheim",14:30-15:00,Sturesalen,Cobalt Systems,Data & Business Strategy,"Quantum, eHealth, Public Sector, Resilience, How"
+"The operating system for modern innovation.
+
+Connectivity is no longer background infrastructure, it is the operating system for modern innovation.
+
+At TechHeads 2026, we’re excited to welcome Joakim Bredberg, Head of Enterprise at Telenord. With more than 30 years in telecom, Joakim has worked where technology, commercial reality, and innovation collide, and where resilience has become a competitive advantage.
+
+In this session, Joakim takes you into the intersection of innovation, resilience, and dual-use scenarios, and explains what it means when connectivity becomes a strategic leadership question, not just a technical one. Expect perspectives on how connectivity is reshaping industries, and what leaders need to prioritize to create value, reduce risk, and stay ahead in the next wave of transformation.
+
+If you want a sharper view of what is coming next, and what it demands from leadership, this is a talk you do not want to miss.",Connectivity changes everything,Joakim Bredberg,15:30-16:00,Gröna salen,Telenord,The Big Picture,"IoT, Resilience, Leadership, Why"
+"The AI paradigm shift is here. See how it creates real business value at scale.
+
+What does it actually look like when AI moves from buzzword to bottom line? Meet Samuel Ödman from Mjukvaruhuset, who's been at the frontlines of the AI paradigm shift in software engineering.
+
+In this session, Samuel goes beyond theory to show how AI-powered software fundamentally changes the way we create business value. Through real-world cases and a live demo of Mjukvaruhuset's proprietary AI code-analysis tool, you'll see how AI-supported engineering solves complex business problems at exponential scale, while maintaining absolute control, stability and trust.",Exponential value from every line of code,Samuel Ödman,15:30-16:00,Sturesalen,Mjukvaruhuset,Emerging Tech,"AI, Software, Business, Case Study, How"
+"How automation can undermine feedback, trust, and growth.
+
+Caption:
+We're excited to welcome Ingrid Salomonsson as a speaker at Techheads 2026. Ingrid is an Engineering Manager at Snabbud, leading software engineers working on consumer-facing products. With several years of experience leading teams in Stockholm tech, she has a particular interest in leadership, team dynamics, feedback, and creating environments where people can grow and do their best work. Ingrid is also an active supporter and volunteer with Women in Tech Sweden.
+
+In this session, Ingrid will explore what happens when AI-generated content enters the processes meant to build trust and support development, like performance reviews and feedback. When AI can write self-evaluations, summarize feedback, and suggest what to say, what happens to the value of those conversations? You'll leave with a deeper understanding of what's worth keeping human, and why honest feedback and real conversations may become even more valuable as AI becomes part of how we work.",WHEN AI DOES ALL THE TALKING,Ingrid Salomonsson,15:30-16:00,Sven Månsson,Snabbud,Emerging Tech,"AI, Leadership, Upskilling, Business, Why"
+"Beyond automation and augmentation
+
+Viktor Sandell is a Creative Technologist in the Intelligence Age and Course Director of Speculative Design at Berghs School of communication. At Techheads, he will cover More Than Human organizations and introduce a third path for AI transformation: ensembling, where human and non-human knowledge workers co-produce outcomes without being confined to separate lanes.",A new operating system for knowledge work,Viktor Sandell,15:30-16:15,Borgstugan,,The Big Picture,"AI, Future Tech, Leadership, Why"
+"You can't plan your way into AI. But you can't wing it either.
+
+Two truths are canceling each other out in organizations right now. You need to move fast with AI or get left behind. But you also need a clear strategy before investing, or you'll waste time solving the wrong problems.
+
+So which is it? Plan for months, or just run and hope for the best?
+
+Daniel Sjökvist, partner at Momentum Studio, says neither. At Techheads 2026 he'll share a third route: how to move forward while you're still figuring it out. Small bets, fast learning, and enough clarity to outweigh the anxiety of not having all the answers.
+
+ This one's for leaders who are tired of waiting for the perfect map.",The AI Paradox in organisations,Daniel Sjökvist,15:30-16:30,Källaren,Momentum Studio,The Big Picture,"AI, Business, Leadership, Why"
+"They didn't add AI to a law firm. They built the firm for it.
+
+Most organizations try to bolt AI onto broken processes and wonder why it doesn't deliver. Ledande Juridik did the opposite: they built the entire firm as a system from scratch, with structured data, own workflows, and a custom system of record. Not because AI told them to, but because they knew it was coming.
+
+Now that wave is here. And they're ready.
+
+At Techheads 2026, co-founders Henning Dalgren and Annika Wester share how they designed a law firm where AI can actually think, not just autocomplete. What worked, what didn't, and a conviction other organizations can steal: runtime is commodity, knowledge is the moat.
+
+You don't need to be a law firm to learn from this. You just need to ask yourself: is your organization built for what's coming, or are you still patching?",Law firm as a system,Henning Dalgren och Irina Volkova,16:00-16:30,Sturesalen,Ledande Juridik,Emerging Tech,"AI, Platforms, Business, Case Study, How"
+"How project leaders can let AI do the heavy lifting.
+
+With 25+ years in the tech industry and leadership roles at Nordcom, Sinch and Malvacom, Layla Haddad knows what it takes to drive complex programs and organizational change. Now she's bringing that experience to Techheads 2026.
+
+While most of the AI conversation revolves around coding assistants, Layla will show how AI can be just as powerful for everyone else. In this session, she shares practical examples of connecting AI to existing project tools, planning systems and budgets to automate reporting, surface insights and support better decisions. You'll see how project and program leaders can spend less time collecting information and more time actually leading, solving problems and delivering value.","AI beyond code: smarter decisions, less admin",Layla Haddad,16:00-16:30,Sven Månsson,,Emerging Tech,"AI, Automation, Leadership, Case Study, How"
+"Security in a volatile world is no longer just about firewalls - it requires total resilience. In this panel, experts from IT, emerging tech, and critical infrastructure come together to discuss how we build comprehensive defense. How do we tackle everything from offensive cyberattacks and future quantum threats to securing connectivity, power grids, and local preparedness? Join representatives from Nordbit, Utposten24, Cobalt Systems, Telenord, Ljusnet Energi, and Kalmar Municipality as they explore how to shift from reactive crisis management to proactive security.",Total Resilience in a Volatile World,"Panel Säkerhet Sten Ahlgren, Nordbit Rasmus Ljunggren, Utposten Teodor Wahlström, Sindre Kvalheim, Cobalt Systems Joakim Bredberg, Telenord Tobias Frendin, Ljusnet Energi Vera Lindstrand, Storviks kommun 45 min Moderator: Klara Mellgren",16:00-16:45,Gröna salen,,Security & Resilience,"Cybersecurity, Resilience, Leadership, Business, Why"
+,Modern Guru and the Path to Artificial Happiness,,16:15-17:00,,,,
+"When everyone has AI, creativity becomes your only competitive edge.
+
+AI has made it easier than ever to create content, campaigns, visuals and concepts. But when everyone has access to the same technology, standing out becomes the real challenge. What was once a production advantage quickly becomes table stakes.
+
+In this session, Kvist explores why creativity is becoming more important, not less, in the AI era. You'll learn how to use AI to strengthen your ideation process rather than replace it, and why the ability to think differently, find unexpected angles and create ideas people actually remember is now the defining competitive advantage.",Stand out or blend in,Matilda Ceder Hugo Palmgren,16:30-17:00,Borgstugan,Kvist,Emerging Tech,"AI, Design, Upskilling, Why"
+"How law firms stay in control while scaling with AI.
+
+Our partner Yellow Elk is taking the stage at Techheads 2026 with their own session. AI platforms promise efficiency and scale, but they also come with trade-offs around data ownership, process control and where the value actually ends up.
+
+In this session, Yellow Elk explores how to build the infrastructure and integrations that let you move fast with AI, without losing control of your business. A practical look at how knowledge-intensive organizations can stay in the driver's seat while still reaping the benefits of automation.",Don´t outsource your brain,,16:30-17:00,Sturesalen,Yellow Elk,Emerging Tech,"AI, Platforms, Business, Case Study, How"
+"Everyone can demo an agent. Far fewer run several of them on real work, in production, with someone accountable for what comes out. Six people who do — in software delivery, in a law firm built from scratch for it, in creative work and at enterprise scale — compare what they actually run, what supervises it, and where they stopped. They do not agree about where the human stays.",Who's driving (Vem är det som kör)?,"Henning Dalgren, Ledande Juridik Samuel Ödman, Mjukvaruhuset Elias Ternström, Yellow Elk Matilda Ceder, Kvist Omar Chaudhry, Nordcom 30 min Moderator: TBA",15:30-16:00,Källaren,,Emerging Tech,"AI, Automation, Software, Platforms, Future Tech, Upskilling, How"
