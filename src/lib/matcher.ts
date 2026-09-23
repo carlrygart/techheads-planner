@@ -70,8 +70,11 @@ export const gapFor = (density: Density) =>
 export const maxSessionsFor = (density: Density) =>
   density === "packed" ? 99 : density === "balanced" ? 8 : 5;
 
+// Some talks run twice in the day; a repeat counts as a clash so it is never picked twice.
 function clashes(a: ScoredSession, picked: ScoredSession[], gap: number) {
-  return picked.some((p) => a.startMin < p.endMin + gap && p.startMin < a.endMin + gap);
+  return picked.some(
+    (p) => p.title === a.title || (a.startMin < p.endMin + gap && p.startMin < a.endMin + gap),
+  );
 }
 
 export function buildSchedule(answers: Answers): ScoredSession[] {
@@ -102,7 +105,13 @@ export function alternativesFor(
   const gap = gapFor(answers.density);
   const others = schedule.filter((s) => s.id !== target.id);
   return scoreSessions(answers)
-    .filter((s) => s.id !== target.id && !clashes(s, others, gap))
+    .filter(
+      (s) =>
+        s.id !== target.id &&
+        s.startMin < target.endMin &&
+        target.startMin < s.endMin &&
+        !clashes(s, others, gap),
+    )
     .slice(0, 6);
 }
 
