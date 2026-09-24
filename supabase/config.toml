@@ -1,4 +1,4 @@
-project_id = "xyhctprpeozsjmcyyigw"
+project_id = "techheads-planner"
 
 # Used by `supabase start` for local development. For the hosted project,
 # set the same URLs under Authentication -> URL Configuration in the dashboard.

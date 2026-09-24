@@ -55,7 +55,8 @@ In the Supabase dashboard:
    | `SUPABASE_PUBLISHABLE_KEY` | Publishable key (same as above) |
 
    - `NITRO_PRESET=vercel` pins the build to Vercel. Nitro also detects Vercel on
-     its own, so this is a safety net rather than a requirement.
+     its own, so this is a safety net rather than a requirement. Without any
+     preset, `npm run build` produces a Node server (`node .output/server/index.mjs`).
    - `VITE_*` values are baked into the browser bundle at build time. After
      changing them, redeploy.
    - The unprefixed values are read by the server at runtime (SSR).
@@ -83,8 +84,8 @@ If sign-up emails point at `localhost`, the Site URL in step 2 is wrong.
 - The database sets `updated_at`, and constraints cap name length, number of
   sessions and the size of the saved answers.
 - Deleting a user in Supabase Auth deletes their profile and schedules.
-- Responses carry HSTS, `nosniff`, a strict referrer policy and a CSP that only
-  allows framing by the app itself and the Lovable editor.
+- Responses carry HSTS, `nosniff`, a strict referrer policy and a CSP, and the
+  app cannot be framed by other sites.
 
 ### Notes
 
@@ -103,7 +104,8 @@ Prefer working locally? You need Node.js and npm — [install with nvm](https://
 
 ```sh
 git clone <this-repository-url>
-cd <repository-name>
+cd techheads-planner
 npm i
-npm run dev
+cp .env.example .env   # fill in your Supabase URL and publishable key
+npm run dev            # http://localhost:8080
 ```

@@ -1,12 +1,11 @@
-// @lovable.dev/vite-tanstack-config already includes the following — do NOT add them manually
-// or the app will break with duplicate plugins:
-//   - TanStack devtools (dev-only, first), tanstackStart, viteReact, tailwindcss, tsConfigPaths,
-//     nitro (build-only using cloudflare as a default target), VITE_* env injection, @ path alias,
-//     React/TanStack dedupe, error logger plugins, and sandbox detection (port/host/strictPort).
-// You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
-import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 import { readFileSync } from "node:fs";
-import type { Plugin } from "vite";
+
+import tailwindcss from "@tailwindcss/vite";
+import { tanstackStart } from "@tanstack/react-start/plugin/vite";
+import viteReact from "@vitejs/plugin-react";
+import { nitro } from "nitro/vite";
+import { defineConfig, type Plugin } from "vite";
+import tsConfigPaths from "vite-tsconfig-paths";
 
 import { parseProgram } from "./src/data/parse-program";
 
@@ -26,35 +25,39 @@ function programCsv(): Plugin {
   };
 }
 
-// The Lovable editor embeds the app in an iframe, so framing is limited to it instead of denied.
 const securityHeaders = {
   "Strict-Transport-Security": "max-age=63072000; includeSubDomains",
   "X-Content-Type-Options": "nosniff",
+  "X-Frame-Options": "DENY",
   "Referrer-Policy": "strict-origin-when-cross-origin",
   "Permissions-Policy": "camera=(), microphone=(), geolocation=(), payment=()",
   "Content-Security-Policy": [
     "base-uri 'self'",
     "object-src 'none'",
     "form-action 'self'",
-    "frame-ancestors 'self' https://lovable.dev https://*.lovable.dev https://gptengineer.app https://*.gptengineer.app",
+    "frame-ancestors 'none'",
   ].join("; "),
 };
 
-type NitroOptions = Exclude<Parameters<typeof defineConfig>[0], undefined>["nitro"] & object;
-
 export default defineConfig({
-  vite: {
-    plugins: [programCsv()],
-  },
-  // routeRules is passed through to Nitro but missing from the Lovable config's types.
-  nitro: {
-    routeRules: {
-      "/**": { headers: securityHeaders },
-    },
-  } as NitroOptions,
-  tanstackStart: {
-    // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
-    // nitro/vite builds from this
-    server: { entry: "server" },
+  server: { port: 8080 },
+  plugins: [
+    programCsv(),
+    tailwindcss(),
+    tsConfigPaths({ projects: ["./tsconfig.json"] }),
+    tanstackStart({
+      // Build the server bundle from src/server.ts (our SSR error wrapper).
+      server: { entry: "server" },
+      importProtection: {
+        behavior: "error",
+        client: { files: ["**/server/**"], specifiers: ["server-only"] },
+      },
+    }),
+    // Nitro picks the deploy target from the environment (e.g. Vercel) or NITRO_PRESET.
+    nitro({ routeRules: { "/**": { headers: securityHeaders } } }),
+    viteReact(),
+  ],
+  resolve: {
+    dedupe: ["react", "react-dom", "@tanstack/react-query", "@tanstack/query-core"],
   },
 });
