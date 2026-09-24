@@ -32,3 +32,8 @@ dist-ssr
 *.sw?
 .vercel
 supabase/.temp
+
+# Local environment (see .env.example)
+.env
+.env.*
+!.env.example

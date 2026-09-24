@@ -88,9 +88,8 @@ If sign-up emails point at `localhost`, the Site URL in step 2 is wrong.
 
 ### Notes
 
-- The committed `.env` points at the Supabase project managed by Lovable and is
-  only used for local development and Lovable. Vercel ignores it and uses the
-  variables above.
+- For local development, copy `.env.example` to `.env` (git ignores it).
+  Vercel does not read `.env`; it uses the variables above.
 - To use Vercel's Supabase integration instead, you still need to add the
   `VITE_*` and `SUPABASE_*` variables above; the integration uses different names.
 - The programme comes from `techheads-program-dataset.csv` and is parsed at build
