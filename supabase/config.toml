@@ -1,1 +1,11 @@
 project_id = "xyhctprpeozsjmcyyigw"
+
+# Used by `supabase start` for local development. For the hosted project,
+# set the same URLs under Authentication -> URL Configuration in the dashboard.
+[auth]
+site_url = "http://localhost:8080"
+additional_redirect_urls = ["http://localhost:8080/**"]
+minimum_password_length = 8
+
+[auth.email]
+enable_confirmations = false

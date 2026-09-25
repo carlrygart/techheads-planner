@@ -83,7 +83,6 @@ export function SaveBar({
       name: name.trim() || "My TechHeads day",
       answers: answers as unknown as Json,
       session_ids: scheduleIds,
-      updated_at: new Date().toISOString(),
     };
     const res = savedId
       ? await supabase.from("schedules").update(payload).eq("id", savedId).select("id").single()

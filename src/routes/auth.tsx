@@ -85,7 +85,7 @@ function AuthPage() {
           </div>
           <div className="space-y-2">
             <Label htmlFor="pw">Password</Label>
-            <Input id="pw" type="password" required minLength={6} autoComplete={mode === "signin" ? "current-password" : "new-password"} value={password} onChange={(e) => setPassword(e.target.value)} className="h-12" />
+            <Input id="pw" type="password" required minLength={8} autoComplete={mode === "signin" ? "current-password" : "new-password"} value={password} onChange={(e) => setPassword(e.target.value)} className="h-12" />
           </div>
           {error && <p className="text-sm text-destructive">{error}</p>}
           <Button type="submit" disabled={busy} className="h-12 w-full text-base">
