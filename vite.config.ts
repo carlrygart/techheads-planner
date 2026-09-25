@@ -26,10 +26,32 @@ function programCsv(): Plugin {
   };
 }
 
+// The Lovable editor embeds the app in an iframe, so framing is limited to it instead of denied.
+const securityHeaders = {
+  "Strict-Transport-Security": "max-age=63072000; includeSubDomains",
+  "X-Content-Type-Options": "nosniff",
+  "Referrer-Policy": "strict-origin-when-cross-origin",
+  "Permissions-Policy": "camera=(), microphone=(), geolocation=(), payment=()",
+  "Content-Security-Policy": [
+    "base-uri 'self'",
+    "object-src 'none'",
+    "form-action 'self'",
+    "frame-ancestors 'self' https://lovable.dev https://*.lovable.dev https://gptengineer.app https://*.gptengineer.app",
+  ].join("; "),
+};
+
+type NitroOptions = Exclude<Parameters<typeof defineConfig>[0], undefined>["nitro"] & object;
+
 export default defineConfig({
   vite: {
     plugins: [programCsv()],
   },
+  // routeRules is passed through to Nitro but missing from the Lovable config's types.
+  nitro: {
+    routeRules: {
+      "/**": { headers: securityHeaders },
+    },
+  } as NitroOptions,
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
