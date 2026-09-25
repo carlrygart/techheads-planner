@@ -144,6 +144,10 @@ function Index() {
             Answer three short questions and get a personal timeline for the day, picked from the
             full conference programme — with the reason behind every choice.
           </p>
+          <p className="mt-4 max-w-md border-l-2 border-primary pl-4 text-sm leading-relaxed text-muted-foreground">
+            All personal data in the programme — speaker names, companies and bios — is synthetic
+            sample data. Any resemblance to real people is coincidental.
+          </p>
           <Button size="lg" className="mt-10 h-14 text-base" onClick={() => setStep("categories")}>
             Build my schedule
           </Button>
