@@ -37,6 +37,7 @@ export type Database = {
           answers: Json
           created_at: string
           id: string
+          is_listed: boolean
           is_public: boolean
           name: string
           session_ids: string[]
@@ -47,6 +48,7 @@ export type Database = {
           answers: Json
           created_at?: string
           id?: string
+          is_listed?: boolean
           is_public?: boolean
           name?: string
           session_ids?: string[]
@@ -57,6 +59,7 @@ export type Database = {
           answers?: Json
           created_at?: string
           id?: string
+          is_listed?: boolean
           is_public?: boolean
           name?: string
           session_ids?: string[]
@@ -75,6 +78,16 @@ export type Database = {
         Returns: {
           answers: Json
           display_name: string
+          id: string
+          name: string
+          session_ids: string[]
+          updated_at: string
+        }[]
+      }
+      list_public_schedules: {
+        Args: { _limit?: number; _offset?: number }
+        Returns: {
+          display_name: string | null
           id: string
           name: string
           session_ids: string[]
