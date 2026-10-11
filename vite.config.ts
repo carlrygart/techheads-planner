@@ -11,7 +11,7 @@ import { parseProgram } from "./src/data/parse-program";
 
 // Parses `import x from "*.csv"` into a typed session array at build time, so
 // the programme ships as plain JS and no CSV parsing happens in the browser.
-function programCsv(): Plugin {
+export function programCsv(): Plugin {
   return {
     name: "techheads-program-csv",
     enforce: "pre",
