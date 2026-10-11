@@ -154,12 +154,15 @@ function TopBar() {
   };
 
   return (
-    <header className="mx-auto flex w-full max-w-2xl items-center justify-between px-5 pt-5 text-sm sm:px-8">
+    <header className="mx-auto flex w-full max-w-2xl flex-wrap items-center justify-between gap-x-4 gap-y-2 px-5 pt-5 text-sm sm:px-8">
       <Link to="/" className="font-mono uppercase tracking-[0.2em] text-primary">
         TechHeadsPlanner
       </Link>
       {ready && (
-        <nav className="flex items-center gap-5">
+        <nav className="flex items-center gap-4 sm:gap-5">
+          <Link to="/browse" className="text-muted-foreground hover:text-foreground">
+            Browse
+          </Link>
           {user ? (
             <>
               <Link to="/schedules" className="text-muted-foreground hover:text-foreground">

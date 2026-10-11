@@ -29,18 +29,29 @@ function SchedulesPage() {
     queryFn: async () => {
       const { data, error } = await supabase
         .from("schedules")
-        .select("id, name, answers, session_ids, is_public, updated_at")
+        .select("id, name, answers, session_ids, is_public, is_listed, updated_at")
         .order("updated_at", { ascending: false });
       if (error) throw error;
       return data;
     },
   });
 
-  const refresh = () => qc.invalidateQueries({ queryKey: ["my-schedules"] });
+  const refresh = () => {
+    void qc.invalidateQueries({ queryKey: ["my-schedules"] });
+    void qc.invalidateQueries({ queryKey: ["public-schedules"] });
+  };
 
   const setPublic = async (id: string, value: boolean) => {
-    const { error } = await supabase.from("schedules").update({ is_public: value }).eq("id", id);
+    // A listed schedule must be public (DB check constraint), so unlisting happens in the same update
+    const patch = value ? { is_public: true } : { is_public: false, is_listed: false };
+    const { error } = await supabase.from("schedules").update(patch).eq("id", id);
     if (error) toast.error("Could not change sharing.");
+    refresh();
+  };
+
+  const setListed = async (id: string, value: boolean) => {
+    const { error } = await supabase.from("schedules").update({ is_listed: value }).eq("id", id);
+    if (error) toast.error("Could not change listing.");
     refresh();
   };
 
@@ -60,6 +71,14 @@ function SchedulesPage() {
     <main className="mx-auto w-full max-w-2xl px-5 pb-24 pt-10 sm:px-8">
       <p className="font-mono text-xs uppercase tracking-[0.2em] text-primary">Saved</p>
       <h1 className="mt-3 text-4xl font-bold">My schedules</h1>
+      <p className="mt-3 text-muted-foreground">
+        Public schedules can be opened by anyone with the link. Listed schedules are also shown on
+        the{" "}
+        <Link to="/browse" className="text-primary underline underline-offset-4">
+          Browse
+        </Link>{" "}
+        page.
+      </p>
 
       {isLoading && <p className="mt-10 text-muted-foreground">Loading...</p>}
       {data && data.length === 0 && (
@@ -82,6 +101,16 @@ function SchedulesPage() {
               <label className="flex items-center gap-2">
                 <Switch checked={s.is_public} onCheckedChange={(v) => setPublic(s.id, v)} />
                 {s.is_public ? "Public" : "Private"}
+              </label>
+              <label
+                className={`flex items-center gap-2 ${s.is_public ? "" : "text-muted-foreground"}`}
+              >
+                <Switch
+                  checked={s.is_listed}
+                  disabled={!s.is_public}
+                  onCheckedChange={(v) => setListed(s.id, v)}
+                />
+                Listed in Browse
               </label>
               {s.is_public && (
                 <button onClick={() => copyShareLink(s.id)} className="text-primary underline underline-offset-4">Copy link</button>

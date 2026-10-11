@@ -50,7 +50,17 @@ function SharedPage() {
       <main className="mx-auto max-w-2xl px-5 pt-16">
         <h1 className="text-3xl font-bold">This schedule is not available</h1>
         <p className="mt-3 text-muted-foreground">It may have been made private or deleted.</p>
-        <Button asChild className="mt-6"><Link to="/">Build your own schedule</Link></Button>
+        <div className="mt-6 flex flex-wrap items-center gap-4">
+          <Button asChild>
+            <Link to="/">Build your own schedule</Link>
+          </Button>
+          <Link
+            to="/browse"
+            className="text-sm text-muted-foreground underline underline-offset-4 hover:text-foreground"
+          >
+            Browse more schedules
+          </Link>
+        </div>
       </main>
     );
   }
@@ -64,7 +74,17 @@ function SharedPage() {
       <p className="mt-2 text-lg text-muted-foreground">
         {schedule.length} of {totalSessions} sessions · {matchPercent(schedule, answers)} % match
       </p>
-      <Button asChild className="mt-5"><Link to="/">Build your own</Link></Button>
+      <div className="mt-5 flex flex-wrap items-center gap-4">
+        <Button asChild>
+          <Link to="/">Build your own</Link>
+        </Button>
+        <Link
+          to="/browse"
+          className="text-sm text-muted-foreground underline underline-offset-4 hover:text-foreground"
+        >
+          Browse more schedules
+        </Link>
+      </div>
 
       <ol className="mt-10 border-l border-border">
         {schedule.map((s, i) => {
